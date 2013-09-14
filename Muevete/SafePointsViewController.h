@@ -10,7 +10,6 @@
 #import <GoogleMaps/GoogleMaps.h>
 #import "ServerCommunicator.h"
 #import "FileSaver.h"
-#import "RNGridMenu.h"
 #import "MBAlertView.h"
 #import "PullActionButton.h"
 @interface SafePointsViewController : UIViewController<PullActionButtonDelegate>

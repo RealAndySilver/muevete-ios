@@ -25,7 +25,7 @@
                        @"caption" : @"Build great social apps and get more installs.",
                        @"description" : @"The Facebook SDK for iOS makes it easier and faster to develop Facebook integrated iOS apps."
                        } mutableCopy];
-    PullActionButton *backButton=[[PullActionButton alloc]initWithFrame:CGRectMake(-100, 0, 150, 44)];
+    PullActionButton *backButton=[[PullActionButton alloc]initWithFrame:CGRectMake(-100, 20, 150, 44)];
     backButton.the_delegate=self;
     backButton.tag=1;
     backButton.icon.image=[UIImage imageNamed:@"left.png"];

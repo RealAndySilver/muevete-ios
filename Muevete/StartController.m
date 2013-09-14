@@ -23,12 +23,16 @@
         flag=NO;
         lastColor=kGreenColor;
         points=[[NSMutableArray alloc]init];
-        container=[[UIView alloc]initWithFrame:CGRectMake(0, 0, frame.size.width, frame.size.height)];
-        topContainer=[[UIView alloc]initWithFrame:CGRectMake(-320, 0, frame.size.width, 40)];
+        container=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
+        topContainer=[[UIView alloc]initWithFrame:CGRectMake(-320, 0, self.frame.size.width, 60)];
         topContainer.backgroundColor=[UIColor colorWithWhite:0 alpha:0.7];
-        middleContainer=[[UIView alloc]initWithFrame:CGRectMake(0, 40, frame.size.width, 60)];
+        
+        UIImageView *rightLogo=[[UIImageView alloc]initWithFrame:CGRectMake(topContainer.frame.size.width-80, 25, 70, 20)];
+        rightLogo.image=[UIImage imageNamed:@""]
+        
+        middleContainer=[[UIView alloc]initWithFrame:CGRectMake(0, topContainer.frame.origin.y+topContainer.frame.size.height, self.frame.size.width, 60)];
         middleContainer.backgroundColor=[UIColor clearColor];
-        bottomContainer=[[UIView alloc]initWithFrame:CGRectMake(0, 100, frame.size.width, 44)];
+        bottomContainer=[[UIView alloc]initWithFrame:CGRectMake(0, middleContainer.frame.origin.y+middleContainer.frame.size.height, self.frame.size.width, 44)];
         bottomContainer.backgroundColor=[UIColor clearColor];
         [bottomContainer setClipsToBounds:YES];
         [middleContainer setClipsToBounds:YES];
@@ -79,6 +83,14 @@
         leftBarActionButton.tag=100;
         lastText=@"Iniciar";
         [leftBar addSubview:leftBarActionButton];
+        
+        UIImageView *grip=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"grip.png"]];
+        grip.frame=CGRectMake(0, 0, 10, 20);
+        grip.center=CGPointMake(leftBar.frame.size.width-20, leftBar.frame.size.height/2);
+        [grip setTintColor:[UIColor redColor]];
+        grip.alpha=0.3;
+        [leftBar addSubview:grip];
+        
         mainBarStateLabel=[[UILabel alloc]initWithFrame:CGRectMake(0, 0, 150, 20)];
         mainBarStateLabel.center=CGPointMake(mainBar.frame.size.width/2+mainBarStateLabel.frame.size.width/3,
                                              mainBar.frame.size.height/5);
@@ -116,7 +128,7 @@
         speedLabel.textColor=[UIColor whiteColor];
         [mainBar addSubview:speedLabel];
         
-        timeLabel=[[UILabel alloc]initWithFrame:CGRectMake(10,-10,180,50)];
+        timeLabel=[[UILabel alloc]initWithFrame:CGRectMake(10,10,180,50)];
         timeLabel.text=@"00h 00m 00s";
         timeLabel.font=[UIFont boldSystemFontOfSize:50];
         timeLabel.adjustsFontSizeToFitWidth = YES;
@@ -311,7 +323,8 @@
 }
 -(void)animateBarIn{
     [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
-        topContainer.frame=CGRectMake(0, 0, 320, 40);
+        topContainer.frame=CGRectMake(-0, 0, self.frame.size.width, 60);
+        //topContainer.frame=CGRectMake(0, 0, 320, 40);
         altitudeContainer.frame=CGRectMake(220, -64, 200, 88);
     }completion:^(BOOL finished){
     }];
@@ -356,7 +369,7 @@
 -(void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
     switch (scrollView.tag) {
         case 1:
-            if (scrollView.contentOffset.x<-100.0) {
+            if (scrollView.contentOffset.x<-80.0) {
                 NSLog(@"Comenzar");
                 //[self performSelector:@selector(delayedFlag) withObject:nil afterDelay:1];
                 [self startNoPromt:leftBarActionButton];
@@ -375,7 +388,7 @@
     switch (scrollView.tag) {
         case 1:
             if ([scrollView isDragging]){
-                if (scrollView.contentOffset.x<-100) {
+                if (scrollView.contentOffset.x<-80) {
                     [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
                         leftBar.backgroundColor=kYellowColor;
                         [leftBarActionButton setTitle:@"Soltar" forState:UIControlStateNormal];

@@ -46,17 +46,17 @@
     path = [GMSMutablePath path];
     polyline = [GMSPolyline polylineWithPath:path];
     
-    UIView *topBanner=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44)];
+    UIView *topBanner=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 64)];
     topBanner.backgroundColor=[UIColor colorWithWhite:0.1 alpha:0.7];
     
     [self.view addSubview:topBanner];
     
-    UIView *resultBanner=[[UIView alloc]initWithFrame:CGRectMake(0, 44, self.view.frame.size.width, 50)];
+    UIView *resultBanner=[[UIView alloc]initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, 50)];
     resultBanner.backgroundColor=[UIColor colorWithWhite:0.1 alpha:0.7];
     
     [self.view addSubview:resultBanner];
     
-    UILabel *timeLabel=[[UILabel alloc]initWithFrame:CGRectMake(10,0,200,50)];
+    UILabel *timeLabel=[[UILabel alloc]initWithFrame:CGRectMake(10,00,200,50)];
     timeLabel.text=[NSString stringWithFormat:@"%.2ih %.2im %.2is",[[trackDic objectForKey:@"hours"]intValue],[[trackDic objectForKey:@"minutes"]intValue],[[trackDic objectForKey:@"seconds"]intValue]];
     timeLabel.font=[UIFont boldSystemFontOfSize:50];
     timeLabel.adjustsFontSizeToFitWidth = YES;
@@ -75,7 +75,7 @@
     [resultBanner addSubview:kmLabel];
 
     
-    UILabel *title=[[UILabel alloc]initWithFrame:CGRectMake(60, 7, 250, 30)];
+    UILabel *title=[[UILabel alloc]initWithFrame:CGRectMake(60, 27, 250, 30)];
     title.backgroundColor=[UIColor clearColor];
     [self.view setClipsToBounds:YES];
     title.adjustsFontSizeToFitWidth=YES;
@@ -85,7 +85,7 @@
     title.text=[NSString stringWithFormat:@"Recorrido: %@",[self dateConverterFromString:[trackDic objectForKey:@"date_created"]]];
     [topBanner addSubview:title];
     
-    PullActionButton *backButton=[[PullActionButton alloc]initWithFrame:CGRectMake(-100, 0, 150, 44)];
+    PullActionButton *backButton=[[PullActionButton alloc]initWithFrame:CGRectMake(-100, 20, 150, 44)];
     backButton.the_delegate=self;
     backButton.tag=1;
     backButton.icon.image=[UIImage imageNamed:@"left.png"];

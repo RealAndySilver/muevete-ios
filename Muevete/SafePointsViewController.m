@@ -43,21 +43,22 @@
     _mapView_.settings.compassButton = NO;
     [self.view addSubview:_mapView_];
     
-    UIView *topBanner=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 44)];
+    UIView *topBanner=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 64)];
     topBanner.backgroundColor=[UIColor colorWithWhite:0.1 alpha:0.7];
     
     [self.view addSubview:topBanner];
     
-    UILabel *title=[[UILabel alloc]initWithFrame:CGRectMake(30, 7, 250, 30)];
+    UILabel *title=[[UILabel alloc]initWithFrame:CGRectMake(30, 27, 250, 30)];
     title.backgroundColor=[UIColor clearColor];
     [self.view setClipsToBounds:YES];
-    title.textAlignment=NSTextAlignmentRight;
+    title.center=CGPointMake(topBanner.frame.size.width/2, topBanner.frame.size.height/2+10);
+    title.textAlignment=NSTextAlignmentCenter;
     title.font=[UIFont boldSystemFontOfSize:25];
     title.textColor=[UIColor whiteColor];
     title.text=@"Puntos Seguros";
     [topBanner addSubview:title];
     
-    PullActionButton *backButton=[[PullActionButton alloc]initWithFrame:CGRectMake(-100, 0, 150, 44)];
+    PullActionButton *backButton=[[PullActionButton alloc]initWithFrame:CGRectMake(-100, 20, 150, 44)];
     backButton.the_delegate=self;
     backButton.tag=1;
     backButton.icon.image=[UIImage imageNamed:@"left.png"];

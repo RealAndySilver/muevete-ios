@@ -26,6 +26,7 @@
         color=kGreenColor;
         hilightColor=kYellowColor;
         icon=[[UIImageView alloc]initWithFrame:CGRectMake(frame.size.width-40, 5, frame.size.height-10, frame.size.height-10)];
+        icon.contentMode=UIViewContentModeScaleAspectFit;
         [icon setBackgroundColor:[UIColor clearColor]];
         [self addSubview:button];
         [button addSubview:icon];

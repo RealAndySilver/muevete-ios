@@ -11,12 +11,12 @@
 #import "StartController.h"
 #import "ServerCommunicator.h"
 #import "FileSaver.h"
-#import "RNGridMenu.h"
 #import "PullActionButton.h"
 #import "SafePointsViewController.h"
 #import "LogListViewController.h"
 #import "PullAction3DButton.h"
 #import "MBHUDView.h"
+#import <Social/Social.h>
 #import "FacebookShareViewController.h"
 @interface MyLocationViewController : UIViewController <CLLocationManagerDelegate,StartControllerDelegate,GMSMapViewDelegate,PullActionButtonDelegate,PullAction3DButtonDelegate,UIAlertViewDelegate>{
     StartController *controller;

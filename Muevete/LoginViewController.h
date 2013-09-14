@@ -14,6 +14,7 @@
 #import "MBHUDView.h"
 #import "PullActionButton.h"
 #import <QuartzCore/QuartzCore.h>
+#import "TutorialViewController.h"
 @interface LoginViewController : UIViewController<PullActionButtonDelegate>
 
 @end

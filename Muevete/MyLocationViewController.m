@@ -25,11 +25,12 @@
     int contadorIngresoEnArreglo;
     NSMutableDictionary *diccionarioParaServer;
     GMSPolyline *polyline;
-    RNGridMenu *menu;
     NSArray *safeSpotsArray;
     UIView *lockOverlay;
     PullAction3DButton *lockButton;
     BOOL firstTimeInLocationManager;
+    PullActionButton *button3;
+    NSMutableDictionary *trackStats;
 }
 @property GMSMapView *mapView_;
 @property CLLocationManager *locationManager;
@@ -85,27 +86,34 @@
     _locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters;
     [self performSelector:@selector(setCameraOverLocation) withObject:nil afterDelay:0.5];
     
-    PullActionButton *button1=[[PullActionButton alloc]initWithFrame:CGRectMake(-200, 250, 250, 44)];
+    PullActionButton *button1=[[PullActionButton alloc]initWithFrame:CGRectMake(-200, 150, 250, 44)];
     button1.the_delegate=self;
     button1.tag=1;
-    button1.icon.image=[UIImage imageNamed:@"right.png"];
+    button1.icon.image=[UIImage imageNamed:@"puntos_seguros.png"];
     [button1 setHilightColor:kRedColor];
     [self.view addSubview:button1];
     
-    PullActionButton *button2=[[PullActionButton alloc]initWithFrame:CGRectMake(-200, 310, 250, 44)];
+    PullActionButton *button2=[[PullActionButton alloc]initWithFrame:CGRectMake(-200,
+                                                                                button1.frame.origin.y+button1.frame.size.height+20,
+                                                                                250,
+                                                                                44)];
     button2.the_delegate=self;
     button2.tag=2;
-    button2.icon.image=[UIImage imageNamed:@"attachment.png"];
+    button2.icon.image=[UIImage imageNamed:@"recorridos_guardados.png"];
     [button2 setColor:kYellowColor];
     [button2 setHilightColor:kRedColor];
     [self.view addSubview:button2];
     
-    PullActionButton *button3=[[PullActionButton alloc]initWithFrame:CGRectMake(-200, 370, 250, 44)];
+    button3=[[PullActionButton alloc]initWithFrame:CGRectMake(-200,
+                                                                                button2.frame.origin.y+button2.frame.size.height+20,
+                                                                                250,
+                                                                                44)];
     button3.the_delegate=self;
     button3.tag=4;
-    button3.icon.image=[UIImage imageNamed:@"cube.png"];
+    button3.icon.image=[UIImage imageNamed:@"fb-icon.png"];
     [button3 setColor:kBlueColor];
     [button3 setHilightColor:kRedColor];
+    button3.alpha=0;
     [self.view addSubview:button3];
     
     lockOverlay=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
@@ -114,7 +122,7 @@
     [self.view addSubview:lockOverlay];
     [self.view addSubview:controller];
 
-    lockButton=[[PullAction3DButton alloc]initWithFrame:CGRectMake(160, 160, 50, 50)];
+    lockButton=[[PullAction3DButton alloc]initWithFrame:CGRectMake(0, 0, 50, 50)];
     lockButton.the_delegate=self;
     lockButton.center=CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height-100);
     lockButton.tag=3;
@@ -222,8 +230,11 @@
     [arregloCoordenadas addObject:_mapView_.myLocation];
     [self downloadSafeSpots];
     [self animateLockButton];
+    [self hideFbButton];
 }
 -(void)trackDidStop:(NSMutableDictionary *)result{
+    NSLog(@"El resultado %@",result);
+    trackStats=result;
     GMSMarker *marker = [GMSMarker markerWithPosition:_mapView_.myLocation.coordinate];
     [self reverseGeocodeWithCoordinate:marker.position marker:marker andState:@"Fin del Recorrido"];
     [self animateControllerLocation:CONTROLLER_INITAL_FRAME];
@@ -233,8 +244,10 @@
     [arregloCoordenadas addObject:_mapView_.myLocation];
     [self setPathAndColorToPolyline:kRedColor];
     [self animateLockButton];
+    [self showFbButton];
 }
 -(void)saveTrack:(NSMutableDictionary *)result{
+    
     NSMutableArray *arrayDePuntos=[[NSMutableArray alloc]init];
     for(int i = 0; i < arregloCoordenadas.count; i++) {
 		CLLocation* location = [arregloCoordenadas objectAtIndex:i];
@@ -270,6 +283,18 @@
 -(void)animateLockButton{
     [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
         lockButton.alpha=lockButton.alpha ? 0:1;
+    }completion:^(BOOL finished){
+    }];
+}
+-(void)showFbButton{
+    [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        button3.alpha=1;
+    }completion:^(BOOL finished){
+    }];
+}
+-(void)hideFbButton{
+    [UIView animateWithDuration:0.5 delay:0.0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+        button3.alpha=0;
     }completion:^(BOOL finished){
     }];
 }
@@ -358,10 +383,16 @@
         [self.navigationController pushViewController:llVC animated:YES];
     }
     else if(tag==4){
-        FacebookShareViewController *fsVC=[[FacebookShareViewController alloc]init];
-        fsVC=[self.storyboard instantiateViewControllerWithIdentifier:@"FacebookShare"];
-        fsVC.modalTransitionStyle=UIModalTransitionStyleCoverVertical;
-        [self presentViewController:fsVC animated:YES completion:nil];
+//        FacebookShareViewController *fsVC=[[FacebookShareViewController alloc]init];
+//        fsVC=[self.storyboard instantiateViewControllerWithIdentifier:@"FacebookShare"];
+//        fsVC.modalTransitionStyle=UIModalTransitionStyleCoverVertical;
+//        [self presentViewController:fsVC animated:YES completion:nil];
+        NSString *hours=[trackStats objectForKey:@"hours"];
+        NSString *minutes=[trackStats objectForKey:@"minutes"];
+        NSString *seconds=[trackStats objectForKey:@"seconds"];
+        NSString *meters=[NSString stringWithFormat:@"%.2f",[[trackStats objectForKey:@"meters"]floatValue]/1000];
+        NSString *message=[NSString stringWithFormat:@"Hoy he recorrido %@ metros durante %@ horas %@ minutos y %@ segundos con la aplicación Muévete de Seguros Colpatria. http://www.iamstudio.co/muevete",meters,hours,minutes,seconds];
+        [self publicarEnFbConMensaje:message];
     }
     else if (tag==3){
         if (!lockButton.isOn) {
@@ -412,5 +443,45 @@
         lockOverlay.alpha=0.8;
     }completion:^(BOOL finished){
     }];
+}
+#pragma mark facebook share
+-(void)publicarEnFbConMensaje:(NSString*)mensaje{
+    if([SLComposeViewController isAvailableForServiceType:SLServiceTypeFacebook]){
+        SLComposeViewController *fbcontroller=[SLComposeViewController composeViewControllerForServiceType:SLServiceTypeFacebook];
+        SLComposeViewControllerCompletionHandler block=^(SLComposeViewControllerResult result){
+            if (result == SLComposeViewControllerResultCancelled) {
+            }
+            else{
+            }
+            [fbcontroller dismissViewControllerAnimated:YES completion:nil];
+        };
+        fbcontroller.completionHandler=block;
+        [fbcontroller setInitialText:mensaje];
+        [self saveScreenshot];
+        NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/Screenshot.jpg"];
+        UIImage *image = [UIImage imageWithContentsOfFile:documentsDirectory];
+        NSData *imageAttachment = UIImageJPEGRepresentation(image,1);
+        [fbcontroller addImage:[UIImage imageWithData:imageAttachment]];
+        [self presentViewController:fbcontroller animated:YES completion:nil];
+        
+    }
+    else{
+        [[[UIAlertView alloc]initWithTitle:@"Error" message:@"Para poder compartir es necesario que tengas una cuenta de Facebook inscrita en tu dispositivo. Para hacer esto dirígete a 'Ajustes->Facebook' y agrega tu cuenta. Es muy sencillo!" delegate:Nil cancelButtonTitle:@"OK" otherButtonTitles:nil, nil] show];
+    }
+}
+#pragma mark Guardar imagen
+- (IBAction)saveScreenshot {
+    
+    UIGraphicsBeginImageContextWithOptions(controller.bounds.size, NO, 0.0);
+    [[controller layer] renderInContext:UIGraphicsGetCurrentContext()];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    NSString *savePath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/Screenshot.jpg"];
+    [UIImageJPEGRepresentation(newImage, 1 ) writeToFile:savePath atomically:YES];
+//    NSError *error;
+//    NSFileManager *fileMgr = [NSFileManager defaultManager];
+//    NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
+//    NSLog(@"Documents directory: %@", [fileMgr contentsOfDirectoryAtPath:documentsDirectory error:&error]);
+    
 }
 @end

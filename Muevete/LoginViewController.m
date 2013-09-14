@@ -23,11 +23,13 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    [self deleteUserDic];
+    //[self deleteUserDic];
     if ([self userExists]) {
         [self goToNextVC];
         return;
     }
+    [self callTutorial];
+    
     UIView *loginButtonContainer=[[UIView alloc]initWithFrame:CGRectMake(0, 130, self.view.frame.size.width, 60)];
     loginButtonContainer.backgroundColor=kRedColor;
     loginButtonContainer.center=CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height/2);
@@ -183,5 +185,13 @@
 -(void)actionAccepted:(int)tag{
     NSLog(@"Accepted");
     [self login];
+}
+-(IBAction)infoButton:(id)sender{
+    [self callTutorial];
+}
+-(void)callTutorial{
+    TutorialViewController *tVC=[[TutorialViewController alloc]init];
+    tVC=[self.storyboard instantiateViewControllerWithIdentifier:@"Tutorial"];
+    [self presentViewController:tVC animated:YES completion:nil];
 }
 @end
