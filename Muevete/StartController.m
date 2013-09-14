@@ -27,8 +27,9 @@
         topContainer=[[UIView alloc]initWithFrame:CGRectMake(-320, 0, self.frame.size.width, 60)];
         topContainer.backgroundColor=[UIColor colorWithWhite:0 alpha:0.7];
         
-        UIImageView *rightLogo=[[UIImageView alloc]initWithFrame:CGRectMake(topContainer.frame.size.width-80, 25, 70, 20)];
-        rightLogo.image=[UIImage imageNamed:@""]
+        UIImageView *rightLogo=[[UIImageView alloc]initWithFrame:CGRectMake(topContainer.frame.size.width-100, 38, 85, 15)];
+        rightLogo.image=[UIImage imageNamed:@"colpatriasmall.png"];
+        [topContainer addSubview:rightLogo];
         
         middleContainer=[[UIView alloc]initWithFrame:CGRectMake(0, topContainer.frame.origin.y+topContainer.frame.size.height, self.frame.size.width, 60)];
         middleContainer.backgroundColor=[UIColor clearColor];
