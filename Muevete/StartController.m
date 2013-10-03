@@ -8,7 +8,8 @@
 
 #import "StartController.h"
 #define kGreenColor [UIColor colorWithRed:64.0/255 green:174.0/255 blue:126.0/255 alpha:1]
-#define kRedColor [UIColor colorWithRed:250.0/255 green:88.0/255 blue:88.0/255 alpha:1]
+//#define kRedColor [UIColor colorWithRed:250.0/255 green:88.0/255 blue:88.0/255 alpha:1]
+#define kRedColor [UIColor colorWithRed:255.0/255 green:0.0/255 blue:0.0/255 alpha:1]
 #define kYellowColor [UIColor colorWithRed:191.0/255 green:184.0/255 blue:50.0/255 alpha:1]
 //191,184,50,0.98
 //64,174,126
@@ -27,8 +28,11 @@
         topContainer=[[UIView alloc]initWithFrame:CGRectMake(-320, 0, self.frame.size.width, 60)];
         topContainer.backgroundColor=[UIColor colorWithWhite:0 alpha:0.7];
         
-        UIImageView *rightLogo=[[UIImageView alloc]initWithFrame:CGRectMake(topContainer.frame.size.width-100, 38, 85, 15)];
-        rightLogo.image=[UIImage imageNamed:@"colpatriasmall.png"];
+        //UIImageView *rightLogo=[[UIImageView alloc]initWithFrame:CGRectMake(topContainer.frame.size.width-100, 38, 85, 15)];
+        //rightLogo.image=[UIImage imageNamed:@"colpatriasmall.png"];
+        UIImageView *rightLogo=[[UIImageView alloc]initWithFrame:CGRectMake(topContainer.frame.size.width-120, 30, 110, 30)];
+        rightLogo.image=[UIImage imageNamed:@"logocolpatria.png"];
+
         [topContainer addSubview:rightLogo];
         
         middleContainer=[[UIView alloc]initWithFrame:CGRectMake(0, topContainer.frame.origin.y+topContainer.frame.size.height, self.frame.size.width, 60)];
@@ -139,7 +143,7 @@
         
         altitudeLabel=[[UILabel alloc]initWithFrame:CGRectMake(30,50,67,50)];
         altitudeLabel.text=@"0m";
-        altitudeLabel.textColor=kRedColor;
+        altitudeLabel.textColor=[UIColor whiteColor];
         altitudeLabel.font=[UIFont boldSystemFontOfSize:20];
         altitudeLabel.adjustsFontSizeToFitWidth = YES;
         altitudeLabel.backgroundColor=[UIColor clearColor];
@@ -297,6 +301,7 @@
     minutes=0;
     hours=0;
     meters=0;
+    globalSeconds=0;
     [points removeAllObjects];
     kmLabel.text=@"0.0 Km";
     timeLabel.text=@"00h 00m 00s";

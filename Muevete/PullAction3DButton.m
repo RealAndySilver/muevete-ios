@@ -13,7 +13,7 @@
 
 @implementation PullAction3DButton
 
-@synthesize the_delegate,color,hilightColor,icon,isOn;
+@synthesize the_delegate,color,hilightColor,icon,isOn,mainImage,hilighted;
 - (id)initWithFrame:(CGRect)frame{
     self = [super initWithFrame:frame];
     if (self) {
@@ -27,8 +27,9 @@
         button.backgroundColor=kGreenColor;
         color=kGreenColor;
         hilightColor=kYellowColor;
-        icon=[[UIImageView alloc]initWithFrame:CGRectMake(frame.size.width-40, 7, frame.size.width-0, frame.size.height-0)];
+        icon=[[UIImageView alloc]initWithFrame:CGRectMake(frame.size.width-40, 7, frame.size.width-0, frame.size.height-0-10)];
         icon.center=CGPointMake(self.frame.size.width/2, self.frame.size.height/2);
+        icon.contentMode=UIViewContentModeScaleAspectFit;
         [icon setBackgroundColor:[UIColor clearColor]];
         [self addSubview:button];
         [button addSubview:icon];
@@ -71,6 +72,7 @@
 }
 -(void)setButtonState{
     isOn=isOn ? NO:YES;
+    icon.image=isOn ? hilighted:mainImage;
     NSLog(@"State %i",(int)isOn);
 }
 #pragma mark -touches delegate

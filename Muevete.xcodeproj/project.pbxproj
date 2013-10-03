@@ -25,7 +25,6 @@
 		33DA028717C3D92C0017C93B /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 33DA028617C3D92C0017C93B /* libz.dylib */; };
 		33DA028B17C3D94A0017C93B /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33DA028A17C3D94A0017C93B /* QuartzCore.framework */; };
 		33DA028D17C3D9550017C93B /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33DA028C17C3D9550017C93B /* SystemConfiguration.framework */; };
-		33DA029017C3E18B0017C93B /* Location.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 33DA028F17C3E18B0017C93B /* Location.jpg */; };
 		7502139B17D8111900BF19D0 /* PullAction3DButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7502139A17D8111900BF19D0 /* PullAction3DButton.m */; };
 		7502139D17D822A400BF19D0 /* up.png in Resources */ = {isa = PBXBuildFile; fileRef = 7502139C17D822A400BF19D0 /* up.png */; };
 		7502139F17D822E300BF19D0 /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = 7502139E17D822E300BF19D0 /* right.png */; };
@@ -62,6 +61,8 @@
 		750C5C7817D6D5F20041BA59 /* LogListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 750C5C7717D6D5F20041BA59 /* LogListViewController.m */; };
 		750C5C7B17D6E1330041BA59 /* TrackMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 750C5C7A17D6E1330041BA59 /* TrackMapViewController.m */; };
 		750C5C7E17D7CB1C0041BA59 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 750C5C7D17D7CB1C0041BA59 /* CustomCell.m */; };
+		754E763117FC83B4008F5841 /* logocolpatria.png in Resources */ = {isa = PBXBuildFile; fileRef = 754E763017FC83B4008F5841 /* logocolpatria.png */; };
+		754E763317FC8545008F5841 /* applogo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 754E763217FC8545008F5841 /* applogo2.png */; };
 		7587871517C2F9B9006F5F22 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7587871417C2F9B9006F5F22 /* UIKit.framework */; };
 		7587871717C2F9B9006F5F22 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7587871617C2F9B9006F5F22 /* Foundation.framework */; };
 		7587871917C2F9B9006F5F22 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7587871817C2F9B9006F5F22 /* CoreGraphics.framework */; };
@@ -80,6 +81,7 @@
 		7587874317C2FE31006F5F22 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7587874217C2FE31006F5F22 /* FacebookSDK.framework */; };
 		759414FF17C30D0000751296 /* ServerCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 759414FC17C30D0000751296 /* ServerCommunicator.m */; };
 		7594150017C30D0000751296 /* FileSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = 759414FE17C30D0000751296 /* FileSaver.m */; };
+		75A5E00417E781A600B4EFA1 /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A5E00317E781A600B4EFA1 /* lock.png */; };
 		75E7A4B217E2102100BF8A3A /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E7A4B117E2102100BF8A3A /* TutorialViewController.m */; };
 		75E7A4B417E2105300BF8A3A /* applogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 75E7A4B317E2105300BF8A3A /* applogo.png */; };
 		75E7A4B917E2AA0900BF8A3A /* TutorialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E7A4B817E2AA0900BF8A3A /* TutorialView.m */; };
@@ -98,6 +100,8 @@
 		75E7A4D317E402AE00BF8A3A /* colpatriasmall.png in Resources */ = {isa = PBXBuildFile; fileRef = 75E7A4D217E402AE00BF8A3A /* colpatriasmall.png */; };
 		75F64ED617DA75C80088E2F8 /* IAmCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F64ED517DA75C80088E2F8 /* IAmCoder.m */; };
 		75F64EDB17DBECCB0088E2F8 /* FacebookShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75F64EDA17DBECCA0088E2F8 /* FacebookShareViewController.m */; };
+		75F83E7617E8A8B000025F4C /* appicon.png in Resources */ = {isa = PBXBuildFile; fileRef = 75F83E7517E8A8B000025F4C /* appicon.png */; };
+		75F83E7817E8B02C00025F4C /* lock2.png in Resources */ = {isa = PBXBuildFile; fileRef = 75F83E7717E8B02C00025F4C /* lock2.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -121,7 +125,6 @@
 		33DA028617C3D92C0017C93B /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		33DA028A17C3D94A0017C93B /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		33DA028C17C3D9550017C93B /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		33DA028F17C3E18B0017C93B /* Location.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Location.jpg; sourceTree = "<group>"; };
 		7502139917D8111800BF19D0 /* PullAction3DButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PullAction3DButton.h; sourceTree = "<group>"; };
 		7502139A17D8111900BF19D0 /* PullAction3DButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PullAction3DButton.m; sourceTree = "<group>"; };
 		7502139C17D822A400BF19D0 /* up.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = up.png; sourceTree = "<group>"; };
@@ -182,6 +185,8 @@
 		750C5C7A17D6E1330041BA59 /* TrackMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackMapViewController.m; sourceTree = "<group>"; };
 		750C5C7C17D7CB1C0041BA59 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		750C5C7D17D7CB1C0041BA59 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		754E763017FC83B4008F5841 /* logocolpatria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logocolpatria.png; sourceTree = "<group>"; };
+		754E763217FC8545008F5841 /* applogo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = applogo2.png; sourceTree = "<group>"; };
 		7587871117C2F9B9006F5F22 /* Muevete.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Muevete.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7587871417C2F9B9006F5F22 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		7587871617C2F9B9006F5F22 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -208,6 +213,7 @@
 		759414FC17C30D0000751296 /* ServerCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerCommunicator.m; sourceTree = "<group>"; };
 		759414FD17C30D0000751296 /* FileSaver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileSaver.h; sourceTree = "<group>"; };
 		759414FE17C30D0000751296 /* FileSaver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileSaver.m; sourceTree = "<group>"; };
+		75A5E00317E781A600B4EFA1 /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
 		75E7A4B017E2102100BF8A3A /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
 		75E7A4B117E2102100BF8A3A /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
 		75E7A4B317E2105300BF8A3A /* applogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = applogo.png; sourceTree = "<group>"; };
@@ -230,6 +236,8 @@
 		75F64ED517DA75C80088E2F8 /* IAmCoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IAmCoder.m; sourceTree = "<group>"; };
 		75F64ED917DBECCA0088E2F8 /* FacebookShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FacebookShareViewController.h; sourceTree = "<group>"; };
 		75F64EDA17DBECCA0088E2F8 /* FacebookShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FacebookShareViewController.m; sourceTree = "<group>"; };
+		75F83E7517E8A8B000025F4C /* appicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appicon.png; sourceTree = "<group>"; };
+		75F83E7717E8B02C00025F4C /* lock2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock2.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +276,11 @@
 		33DA028E17C3E1740017C93B /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				754E763217FC8545008F5841 /* applogo2.png */,
+				754E763017FC83B4008F5841 /* logocolpatria.png */,
+				75F83E7717E8B02C00025F4C /* lock2.png */,
+				75F83E7517E8A8B000025F4C /* appicon.png */,
+				75A5E00317E781A600B4EFA1 /* lock.png */,
 				75E7A4D217E402AE00BF8A3A /* colpatriasmall.png */,
 				75E7A4CE17E389F100BF8A3A /* recorridos_guardados.png */,
 				75E7A4CC17E3890C00BF8A3A /* puntos_seguros.png */,
@@ -287,7 +300,6 @@
 				7502139C17D822A400BF19D0 /* up.png */,
 				750213A017D822F100BF19D0 /* down.png */,
 				750213A117D822F100BF19D0 /* left.png */,
-				33DA028F17C3E18B0017C93B /* Location.jpg */,
 				750C5C6A17D6ADED0041BA59 /* download.png */,
 				336A800517C5103800AD1003 /* home.jpeg */,
 				750C5C6E17D6AE130041BA59 /* cube.png */,
@@ -579,22 +591,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				754E763317FC8545008F5841 /* applogo2.png in Resources */,
 				75E7A4C217E2C27F00BF8A3A /* icon.png in Resources */,
 				75E7A4B417E2105300BF8A3A /* applogo.png in Resources */,
 				7587871F17C2F9B9006F5F22 /* InfoPlist.strings in Resources */,
 				7587872717C2F9B9006F5F22 /* Default.png in Resources */,
 				75E7A4BF17E2B87100BF8A3A /* main1st.png in Resources */,
 				7587872917C2F9B9006F5F22 /* Default@2x.png in Resources */,
+				75A5E00417E781A600B4EFA1 /* lock.png in Resources */,
 				7587872B17C2F9B9006F5F22 /* Default-568h@2x.png in Resources */,
 				75E7A4D317E402AE00BF8A3A /* colpatriasmall.png in Resources */,
 				7587872E17C2F9B9006F5F22 /* MainStoryboard_iPhone.storyboard in Resources */,
+				754E763117FC83B4008F5841 /* logocolpatria.png in Resources */,
 				75E7A4BD17E2B67F00BF8A3A /* muevetesolo.png in Resources */,
 				7587873117C2F9B9006F5F22 /* MainStoryboard_iPad.storyboard in Resources */,
 				75E7A4BB17E2B5FA00BF8A3A /* colpatrialogo.png in Resources */,
 				75E7A4D117E38A6D00BF8A3A /* fb-icon.png in Resources */,
 				75E7A4CA17E2D12600BF8A3A /* last.png in Resources */,
 				33DA027517C3D8570017C93B /* GoogleMaps.bundle in Resources */,
-				33DA029017C3E18B0017C93B /* Location.jpg in Resources */,
 				336A800617C5103800AD1003 /* home.jpeg in Resources */,
 				750C5C3017D529B00041BA59 /* cancel.png in Resources */,
 				75E7A4CB17E2D12600BF8A3A /* next.png in Resources */,
@@ -606,11 +620,13 @@
 				75E7A4CD17E3890C00BF8A3A /* puntos_seguros.png in Resources */,
 				750C5C7117D6AE130041BA59 /* enter.png in Resources */,
 				7502139D17D822A400BF19D0 /* up.png in Resources */,
+				75F83E7617E8A8B000025F4C /* appicon.png in Resources */,
 				7502139F17D822E300BF19D0 /* right.png in Resources */,
 				750213A217D822F100BF19D0 /* down.png in Resources */,
 				750213A317D822F100BF19D0 /* left.png in Resources */,
 				750213AF17D9046C00BF19D0 /* fbconnect.png in Resources */,
 				750213B117D9059A00BF19D0 /* grip.png in Resources */,
+				75F83E7817E8B02C00025F4C /* lock2.png in Resources */,
 				75E7A4C717E2CAB500BF8A3A /* puntosseguros.png in Resources */,
 				75E7A4C317E2C27F00BF8A3A /* icon@2x.png in Resources */,
 			);

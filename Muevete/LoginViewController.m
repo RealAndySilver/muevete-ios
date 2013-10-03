@@ -12,8 +12,11 @@
 
 
 #import "LoginViewController.h"
-#define kRedColor [UIColor colorWithRed:250.0/255 green:88.0/255 blue:88.0/255 alpha:1]
+//#define kRedColor [UIColor colorWithRed:250.0/255 green:88.0/255 blue:88.0/255 alpha:1]
+#define kGreenColor [UIColor colorWithRed:64.0/255 green:174.0/255 blue:126.0/255 alpha:1]
+#define kRedColor [UIColor colorWithRed:255.0/255 green:0.0/255 blue:0.0/255 alpha:1]
 #define kBlueColor [UIColor colorWithRed:59.0/255 green:89.0/255 blue:152.0/255 alpha:1]
+#define kColpatria [UIColor colorWithRed:189.0/255.0 green:13.0/255.0 blue:18.0/255.0 alpha:1]
 @interface LoginViewController (){
 }
 
@@ -23,15 +26,17 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    //[self deleteUserDic];
+    [self deleteUserDic];
     if ([self userExists]) {
         [self goToNextVC];
         return;
     }
-    [self callTutorial];
+    [self callTutorialAnimated:NO];
+    
+    [self.view setBackgroundColor:kColpatria];
     
     UIView *loginButtonContainer=[[UIView alloc]initWithFrame:CGRectMake(0, 130, self.view.frame.size.width, 60)];
-    loginButtonContainer.backgroundColor=kRedColor;
+    loginButtonContainer.backgroundColor=kBlueColor;
     loginButtonContainer.center=CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height/2);
     [loginButtonContainer setClipsToBounds:YES];
     UIImageView *fbConnectImage=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"fbconnect.png"]];
@@ -44,7 +49,7 @@
     loginButton.layer.shadowOpacity=0.8;
     loginButton.layer.shadowRadius=3.0;
     loginButton.color=kBlueColor;
-    loginButton.hilightColor=kRedColor;
+    loginButton.hilightColor=kColpatria;
     [loginButtonContainer addSubview:loginButton];
     
     loginButton.icon.image=[UIImage imageNamed:@"grip.png"];
@@ -66,9 +71,9 @@
                                                    ^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *user, NSError *error) {
                                                        if (!error) {
                                                            NSMutableDictionary *dic=[[NSMutableDictionary alloc]init];
-                                                           [dic setObject:[user objectForKey:@"id"] forKey:@"id"];
-                                                           [dic setObject:[user objectForKey:@"email"] forKey:@"email"];
-                                                           [dic setObject:[user objectForKey:@"name"] forKey:@"name"];
+                                                           [dic setObject:[IAmCoder base64String:[user objectForKey:@"id"]] forKey:@"id"];
+                                                           [dic setObject:[IAmCoder base64String:[user objectForKey:@"email"]] forKey:@"email"];
+                                                           [dic setObject:[IAmCoder base64String:[user objectForKey:@"name"]] forKey:@"name"];
                                                            [self setDictionary:dic withKey:@"user"];
                                                            [self signUpWithUser:dic];
                                                        }
@@ -187,11 +192,11 @@
     [self login];
 }
 -(IBAction)infoButton:(id)sender{
-    [self callTutorial];
+    [self callTutorialAnimated:YES];
 }
--(void)callTutorial{
+-(void)callTutorialAnimated:(BOOL)animated{
     TutorialViewController *tVC=[[TutorialViewController alloc]init];
     tVC=[self.storyboard instantiateViewControllerWithIdentifier:@"Tutorial"];
-    [self presentViewController:tVC animated:YES completion:nil];
+    [self presentViewController:tVC animated:animated completion:nil];
 }
 @end

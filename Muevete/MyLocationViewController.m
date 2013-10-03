@@ -11,7 +11,9 @@
 #define CONTROLLER_FINAL_FRAME CGRectMake(0, 0, 320, 144)
 #define CONTROLLER_TEST_FRAME CGRectMake(0, self.view.frame.size.height-controller.frame.size.height, 320, 60)
 #define kGreenColor [UIColor colorWithRed:64.0/255 green:174.0/255 blue:126.0/255 alpha:1]
-#define kRedColor [UIColor colorWithRed:250.0/255 green:88.0/255 blue:88.0/255 alpha:1]
+//#define kRedColor [UIColor colorWithRed:250.0/255 green:88.0/255 blue:88.0/255 alpha:1]
+#define kRedColor [UIColor colorWithRed:255.0/255 green:0.0/255 blue:0.0/255 alpha:1]
+
 #define kYellowColor [UIColor colorWithRed:191.0/255 green:184.0/255 blue:50.0/255 alpha:1]
 #define kBlueColor [UIColor colorWithRed:59.0/255 green:89.0/255 blue:152.0/255 alpha:1]
 #define MAX_COUNT_FOR_COORDINATE_ADD 10
@@ -90,6 +92,7 @@
     button1.the_delegate=self;
     button1.tag=1;
     button1.icon.image=[UIImage imageNamed:@"puntos_seguros.png"];
+    [button1 setColor:[UIColor colorWithWhite:0 alpha:0.7]];
     [button1 setHilightColor:kRedColor];
     [self.view addSubview:button1];
     
@@ -101,7 +104,8 @@
     button2.tag=2;
     button2.icon.image=[UIImage imageNamed:@"recorridos_guardados.png"];
     [button2 setColor:kYellowColor];
-    [button2 setHilightColor:kRedColor];
+    [button2 setColor:[UIColor colorWithWhite:0 alpha:0.7]];
+    [button2 setHilightColor:kYellowColor];
     [self.view addSubview:button2];
     
     button3=[[PullActionButton alloc]initWithFrame:CGRectMake(-200,
@@ -111,8 +115,9 @@
     button3.the_delegate=self;
     button3.tag=4;
     button3.icon.image=[UIImage imageNamed:@"fb-icon.png"];
-    [button3 setColor:kBlueColor];
-    [button3 setHilightColor:kRedColor];
+    button3.icon.frame=CGRectMake(button3.frame.size.width-35, 10, button3.frame.size.height-20, button3.frame.size.height-20);
+    [button3 setColor:[UIColor colorWithWhite:0 alpha:0.7]];
+    [button3 setHilightColor:kBlueColor];
     button3.alpha=0;
     [self.view addSubview:button3];
     
@@ -127,7 +132,9 @@
     lockButton.center=CGPointMake(self.view.frame.size.width/2, self.view.frame.size.height-100);
     lockButton.tag=3;
     lockButton.alpha=0;
-    lockButton.icon.image=[UIImage imageNamed:@"up.png"];
+    lockButton.mainImage=[UIImage imageNamed:@"lock2.png"];
+    lockButton.hilighted=[UIImage imageNamed:@"lock.png"];
+    lockButton.icon.image=lockButton.mainImage;
     [lockButton setColor:kRedColor];
     [lockButton setHilightColor:kYellowColor];
     [self.view addSubview:lockButton];
@@ -391,7 +398,7 @@
         NSString *minutes=[trackStats objectForKey:@"minutes"];
         NSString *seconds=[trackStats objectForKey:@"seconds"];
         NSString *meters=[NSString stringWithFormat:@"%.2f",[[trackStats objectForKey:@"meters"]floatValue]/1000];
-        NSString *message=[NSString stringWithFormat:@"Hoy he recorrido %@ metros durante %@ horas %@ minutos y %@ segundos con la aplicación Muévete de Seguros Colpatria. http://www.iamstudio.co/muevete",meters,hours,minutes,seconds];
+        NSString *message=[NSString stringWithFormat:@"Hoy he recorrido %@ Km durante %@ horas %@ minutos y %@ segundos con la aplicación Muévete de Seguros Colpatria. http://www.seguroscolpatria.com/portal/Portals/0/cicloviasegura/cicloviasegura/SitioEstatico/index.html",meters,hours,minutes,seconds];
         [self publicarEnFbConMensaje:message];
     }
     else if (tag==3){
@@ -457,6 +464,8 @@
         };
         fbcontroller.completionHandler=block;
         [fbcontroller setInitialText:mensaje];
+        button3.alpha=0;
+        
         [self saveScreenshot];
         NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/Screenshot.jpg"];
         UIImage *image = [UIImage imageWithContentsOfFile:documentsDirectory];
@@ -472,16 +481,16 @@
 #pragma mark Guardar imagen
 - (IBAction)saveScreenshot {
     
-    UIGraphicsBeginImageContextWithOptions(controller.bounds.size, NO, 0.0);
-    [[controller layer] renderInContext:UIGraphicsGetCurrentContext()];
+    UIGraphicsBeginImageContextWithOptions(self.view.bounds.size, NO, 0.0);
+    [[self.view layer] renderInContext:UIGraphicsGetCurrentContext()];
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     NSString *savePath = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents/Screenshot.jpg"];
-    [UIImageJPEGRepresentation(newImage, 1 ) writeToFile:savePath atomically:YES];
+    [UIImageJPEGRepresentation(newImage, 10.0 ) writeToFile:savePath atomically:YES];
 //    NSError *error;
 //    NSFileManager *fileMgr = [NSFileManager defaultManager];
 //    NSString *documentsDirectory = [NSHomeDirectory() stringByAppendingPathComponent:@"Documents"];
 //    NSLog(@"Documents directory: %@", [fileMgr contentsOfDirectoryAtPath:documentsDirectory error:&error]);
-    
+    button3.alpha=1;
 }
 @end

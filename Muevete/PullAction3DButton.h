@@ -21,6 +21,9 @@
 @property(nonatomic)UIColor *color;
 @property(nonatomic)UIColor *hilightColor;
 @property(nonatomic)UIImageView *icon;
+@property(nonatomic)UIImage *mainImage;
+@property(nonatomic)UIImage *hilighted;
+
 @property(nonatomic)BOOL isOn;
 
 @property(nonatomic,retain)id<PullAction3DButtonDelegate>the_delegate;

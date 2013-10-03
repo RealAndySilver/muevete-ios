@@ -8,9 +8,12 @@
 
 #import "TutorialViewController.h"
 #define kGreenColor [UIColor colorWithRed:64.0/255 green:174.0/255 blue:126.0/255 alpha:1]
-#define kRedColor [UIColor colorWithRed:250.0/255 green:88.0/255 blue:88.0/255 alpha:1]
+//#define kRedColor [UIColor colorWithRed:250.0/255 green:88.0/255 blue:88.0/255 alpha:1]
+#define kRedColor [UIColor colorWithRed:255.0/255 green:0.0/255 blue:0.0/255 alpha:1]
 #define kYellowColor [UIColor colorWithRed:191.0/255 green:184.0/255 blue:50.0/255 alpha:1]
 #define kBlueColor [UIColor colorWithRed:59.0/255 green:89.0/255 blue:152.0/255 alpha:1]
+#define kColpatria [UIColor colorWithRed:189.0/255.0 green:13.0/255.0 blue:18.0/255.0 alpha:1]
+
 @interface TutorialViewController (){
     UIScrollView *scrollView;
     GMSMapView *mapView;
@@ -36,6 +39,7 @@
     [self.view addSubview:scrollView];
     scrollView.backgroundColor=[UIColor colorWithWhite:1 alpha:0.85];
     self.view.backgroundColor=[UIColor whiteColor];
+    scrollView.delegate=self;
     
     //Página Uno
     TutorialView *tutorialView1=[[TutorialView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
@@ -84,9 +88,14 @@
     [startButton addTarget:self action:@selector(dismissViewController) forControlEvents:UIControlEventTouchUpInside];
 
     
-    UIImageView *topLogo=[[UIImageView alloc]initWithFrame:CGRectMake(190, 25, 120, 20)];
-    [self.view addSubview:topLogo];
-    topLogo.image=[UIImage imageNamed:@"colpatrialogo.png"];
+    UIView *topContainer=[[UIView alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 60)];
+    topContainer.backgroundColor=[UIColor colorWithWhite:0.1 alpha:0.7];
+    [self.view addSubview:topContainer];
+    
+    UIImageView *topLogo=[[UIImageView alloc]initWithFrame:CGRectMake(190, 25, 180, 45)];
+    topLogo.center=CGPointMake(topContainer.frame.size.width/2, topContainer.frame.size.height/2+10);
+    [topContainer addSubview:topLogo];
+    topLogo.image=[UIImage imageNamed:@"logocolpatria.png"];
     
     [scrollView setContentSize:CGSizeMake(self.view.frame.size.width*4, self.view.frame.size.height)];
     [scrollView setPagingEnabled:YES];
@@ -125,5 +134,10 @@
 }
 -(void)dismissViewController{
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+-(void)scrollViewDidScroll:(UIScrollView *)scrollview{
+     if (scrollview.contentOffset.x>1010) {
+        [self dismissViewController];
+    }
 }
 @end

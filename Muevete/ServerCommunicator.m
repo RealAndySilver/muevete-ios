@@ -7,7 +7,7 @@
 //
 
 #import "ServerCommunicator.h"
-//#define ENDPOINT @"http://10.0.1.5:5000/api_1.0/"
+//#define ENDPOINT @"http://10.0.1.7:5000/api_1.0/"
 #define ENDPOINT @"http://muevete.aws.af.cm/api_1.0/"
 
 @implementation ServerCommunicator
@@ -49,6 +49,7 @@
 	NSMutableURLRequest *theRequest = [self getHeaderForUrl:url];
 
     [theRequest setHTTPMethod:httpMethod];
+    //parameter=[IAmCoder base64String:parameter];
     NSData *data=[NSData dataWithBytes:[parameter UTF8String] length:[parameter length]];
     [theRequest setHTTPBody: data];
 	theConnection = [[NSURLConnection alloc] initWithRequest:theRequest delegate:self];
