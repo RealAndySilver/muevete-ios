@@ -12,8 +12,6 @@
 		337FC87217CBBE3D0039271B /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 337FC87117CBBE3D0039271B /* MobileCoreServices.framework */; };
 		337FC87417CBBE4E0039271B /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 337FC87317CBBE4E0039271B /* CFNetwork.framework */; };
 		337FC87617CBBEAD0039271B /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 337FC87517CBBEAD0039271B /* OpenGLES.framework */; };
-		33DA027317C3D7450017C93B /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33DA027217C3D7450017C93B /* GoogleMaps.framework */; };
-		33DA027517C3D8570017C93B /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 33DA027417C3D8570017C93B /* GoogleMaps.bundle */; };
 		33DA027717C3D8A50017C93B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33DA027617C3D8A50017C93B /* AVFoundation.framework */; };
 		33DA027917C3D8B40017C93B /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33DA027817C3D8B40017C93B /* CoreData.framework */; };
 		33DA027B17C3D8C10017C93B /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33DA027A17C3D8C10017C93B /* CoreLocation.framework */; };
@@ -61,6 +59,16 @@
 		750C5C7817D6D5F20041BA59 /* LogListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 750C5C7717D6D5F20041BA59 /* LogListViewController.m */; };
 		750C5C7B17D6E1330041BA59 /* TrackMapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 750C5C7A17D6E1330041BA59 /* TrackMapViewController.m */; };
 		750C5C7E17D7CB1C0041BA59 /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 750C5C7D17D7CB1C0041BA59 /* CustomCell.m */; };
+		752A0D97180608FB00FE844F /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752A0D96180608FB00FE844F /* GoogleMaps.framework */; };
+		752A0D991806090900FE844F /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 752A0D981806090900FE844F /* GoogleMaps.bundle */; };
+		752A0D9B18060A1B00FE844F /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752A0D9A18060A1B00FE844F /* FacebookSDK.framework */; };
+		752A0D9D18060D2800FE844F /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752A0D9C18060D2800FE844F /* AdSupport.framework */; };
+		752A0DA4180638C700FE844F /* icon29.png in Resources */ = {isa = PBXBuildFile; fileRef = 752A0D9E180638C600FE844F /* icon29.png */; };
+		752A0DA5180638C700FE844F /* icon57.png in Resources */ = {isa = PBXBuildFile; fileRef = 752A0D9F180638C600FE844F /* icon57.png */; };
+		752A0DA6180638C700FE844F /* icon58.png in Resources */ = {isa = PBXBuildFile; fileRef = 752A0DA0180638C600FE844F /* icon58.png */; };
+		752A0DA7180638C700FE844F /* icon80.png in Resources */ = {isa = PBXBuildFile; fileRef = 752A0DA1180638C600FE844F /* icon80.png */; };
+		752A0DA8180638C700FE844F /* icon114.png in Resources */ = {isa = PBXBuildFile; fileRef = 752A0DA2180638C600FE844F /* icon114.png */; };
+		752A0DA9180638C700FE844F /* icon120.png in Resources */ = {isa = PBXBuildFile; fileRef = 752A0DA3180638C600FE844F /* icon120.png */; };
 		754E763117FC83B4008F5841 /* logocolpatria.png in Resources */ = {isa = PBXBuildFile; fileRef = 754E763017FC83B4008F5841 /* logocolpatria.png */; };
 		754E763317FC8545008F5841 /* applogo2.png in Resources */ = {isa = PBXBuildFile; fileRef = 754E763217FC8545008F5841 /* applogo2.png */; };
 		7587871517C2F9B9006F5F22 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7587871417C2F9B9006F5F22 /* UIKit.framework */; };
@@ -78,18 +86,17 @@
 		7587873B17C2F9D4006F5F22 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7587873A17C2F9D4006F5F22 /* Social.framework */; };
 		7587873F17C2FA2C006F5F22 /* fishhook.c in Sources */ = {isa = PBXBuildFile; fileRef = 7587873C17C2FA2C006F5F22 /* fishhook.c */; };
 		7587874017C2FA2C006F5F22 /* QuietAssertMacros.c in Sources */ = {isa = PBXBuildFile; fileRef = 7587873E17C2FA2C006F5F22 /* QuietAssertMacros.c */; };
-		7587874317C2FE31006F5F22 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7587874217C2FE31006F5F22 /* FacebookSDK.framework */; };
 		759414FF17C30D0000751296 /* ServerCommunicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 759414FC17C30D0000751296 /* ServerCommunicator.m */; };
 		7594150017C30D0000751296 /* FileSaver.m in Sources */ = {isa = PBXBuildFile; fileRef = 759414FE17C30D0000751296 /* FileSaver.m */; };
 		75A5E00417E781A600B4EFA1 /* lock.png in Resources */ = {isa = PBXBuildFile; fileRef = 75A5E00317E781A600B4EFA1 /* lock.png */; };
+		75DC58B71806022600997EF7 /* libFlurry_4.2.4.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 75DC58B61806022600997EF7 /* libFlurry_4.2.4.a */; };
+		75DC58BB1806045F00997EF7 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 75DC58BA1806045F00997EF7 /* Security.framework */; };
 		75E7A4B217E2102100BF8A3A /* TutorialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E7A4B117E2102100BF8A3A /* TutorialViewController.m */; };
 		75E7A4B417E2105300BF8A3A /* applogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 75E7A4B317E2105300BF8A3A /* applogo.png */; };
 		75E7A4B917E2AA0900BF8A3A /* TutorialView.m in Sources */ = {isa = PBXBuildFile; fileRef = 75E7A4B817E2AA0900BF8A3A /* TutorialView.m */; };
 		75E7A4BB17E2B5FA00BF8A3A /* colpatrialogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 75E7A4BA17E2B5FA00BF8A3A /* colpatrialogo.png */; };
 		75E7A4BD17E2B67F00BF8A3A /* muevetesolo.png in Resources */ = {isa = PBXBuildFile; fileRef = 75E7A4BC17E2B67F00BF8A3A /* muevetesolo.png */; };
 		75E7A4BF17E2B87100BF8A3A /* main1st.png in Resources */ = {isa = PBXBuildFile; fileRef = 75E7A4BE17E2B87100BF8A3A /* main1st.png */; };
-		75E7A4C217E2C27F00BF8A3A /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 75E7A4C017E2C27F00BF8A3A /* icon.png */; };
-		75E7A4C317E2C27F00BF8A3A /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 75E7A4C117E2C27F00BF8A3A /* icon@2x.png */; };
 		75E7A4C517E2C78E00BF8A3A /* tracks.png in Resources */ = {isa = PBXBuildFile; fileRef = 75E7A4C417E2C78E00BF8A3A /* tracks.png */; };
 		75E7A4C717E2CAB500BF8A3A /* puntosseguros.png in Resources */ = {isa = PBXBuildFile; fileRef = 75E7A4C617E2CAB500BF8A3A /* puntosseguros.png */; };
 		75E7A4CA17E2D12600BF8A3A /* last.png in Resources */ = {isa = PBXBuildFile; fileRef = 75E7A4C817E2D12600BF8A3A /* last.png */; };
@@ -111,9 +118,6 @@
 		337FC87117CBBE3D0039271B /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		337FC87317CBBE4E0039271B /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		337FC87517CBBEAD0039271B /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
-		33DA027017C3C4CA0017C93B /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
-		33DA027217C3D7450017C93B /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
-		33DA027417C3D8570017C93B /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		33DA027617C3D8A50017C93B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		33DA027817C3D8B40017C93B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		33DA027A17C3D8C10017C93B /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -185,6 +189,16 @@
 		750C5C7A17D6E1330041BA59 /* TrackMapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackMapViewController.m; sourceTree = "<group>"; };
 		750C5C7C17D7CB1C0041BA59 /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomCell.h; sourceTree = "<group>"; };
 		750C5C7D17D7CB1C0041BA59 /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomCell.m; sourceTree = "<group>"; };
+		752A0D96180608FB00FE844F /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
+		752A0D981806090900FE844F /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		752A0D9A18060A1B00FE844F /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		752A0D9C18060D2800FE844F /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		752A0D9E180638C600FE844F /* icon29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon29.png; sourceTree = "<group>"; };
+		752A0D9F180638C600FE844F /* icon57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon57.png; sourceTree = "<group>"; };
+		752A0DA0180638C600FE844F /* icon58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon58.png; sourceTree = "<group>"; };
+		752A0DA1180638C600FE844F /* icon80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon80.png; sourceTree = "<group>"; };
+		752A0DA2180638C600FE844F /* icon114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon114.png; sourceTree = "<group>"; };
+		752A0DA3180638C600FE844F /* icon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon120.png; sourceTree = "<group>"; };
 		754E763017FC83B4008F5841 /* logocolpatria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logocolpatria.png; sourceTree = "<group>"; };
 		754E763217FC8545008F5841 /* applogo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = applogo2.png; sourceTree = "<group>"; };
 		7587871117C2F9B9006F5F22 /* Muevete.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Muevete.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,12 +222,14 @@
 		7587873C17C2FA2C006F5F22 /* fishhook.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = fishhook.c; sourceTree = "<group>"; };
 		7587873D17C2FA2C006F5F22 /* fishhook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fishhook.h; sourceTree = "<group>"; };
 		7587873E17C2FA2C006F5F22 /* QuietAssertMacros.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = QuietAssertMacros.c; sourceTree = "<group>"; };
-		7587874217C2FE31006F5F22 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = ../../Documents/FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		759414FB17C30D0000751296 /* ServerCommunicator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ServerCommunicator.h; sourceTree = "<group>"; };
 		759414FC17C30D0000751296 /* ServerCommunicator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ServerCommunicator.m; sourceTree = "<group>"; };
 		759414FD17C30D0000751296 /* FileSaver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FileSaver.h; sourceTree = "<group>"; };
 		759414FE17C30D0000751296 /* FileSaver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FileSaver.m; sourceTree = "<group>"; };
 		75A5E00317E781A600B4EFA1 /* lock.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = lock.png; sourceTree = "<group>"; };
+		75DC58B51806022600997EF7 /* Flurry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Flurry.h; sourceTree = "<group>"; };
+		75DC58B61806022600997EF7 /* libFlurry_4.2.4.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libFlurry_4.2.4.a; sourceTree = "<group>"; };
+		75DC58BA1806045F00997EF7 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		75E7A4B017E2102100BF8A3A /* TutorialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TutorialViewController.h; sourceTree = "<group>"; };
 		75E7A4B117E2102100BF8A3A /* TutorialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TutorialViewController.m; sourceTree = "<group>"; };
 		75E7A4B317E2105300BF8A3A /* applogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = applogo.png; sourceTree = "<group>"; };
@@ -222,8 +238,6 @@
 		75E7A4BA17E2B5FA00BF8A3A /* colpatrialogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = colpatrialogo.png; sourceTree = "<group>"; };
 		75E7A4BC17E2B67F00BF8A3A /* muevetesolo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = muevetesolo.png; sourceTree = "<group>"; };
 		75E7A4BE17E2B87100BF8A3A /* main1st.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = main1st.png; sourceTree = "<group>"; };
-		75E7A4C017E2C27F00BF8A3A /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		75E7A4C117E2C27F00BF8A3A /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		75E7A4C417E2C78E00BF8A3A /* tracks.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tracks.png; sourceTree = "<group>"; };
 		75E7A4C617E2CAB500BF8A3A /* puntosseguros.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = puntosseguros.png; sourceTree = "<group>"; };
 		75E7A4C817E2D12600BF8A3A /* last.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = last.png; sourceTree = "<group>"; };
@@ -245,13 +259,18 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				752A0D9D18060D2800FE844F /* AdSupport.framework in Frameworks */,
+				75DC58BB1806045F00997EF7 /* Security.framework in Frameworks */,
+				33DA028D17C3D9550017C93B /* SystemConfiguration.framework in Frameworks */,
 				7587873B17C2F9D4006F5F22 /* Social.framework in Frameworks */,
 				750213A917D8EAAA00BF19D0 /* AudioToolbox.framework in Frameworks */,
+				75DC58B71806022600997EF7 /* libFlurry_4.2.4.a in Frameworks */,
+				752A0D9B18060A1B00FE844F /* FacebookSDK.framework in Frameworks */,
 				750C5C2C17D3DF6D0041BA59 /* Accelerate.framework in Frameworks */,
+				752A0D97180608FB00FE844F /* GoogleMaps.framework in Frameworks */,
 				337FC87617CBBEAD0039271B /* OpenGLES.framework in Frameworks */,
 				337FC87417CBBE4E0039271B /* CFNetwork.framework in Frameworks */,
 				337FC87217CBBE3D0039271B /* MobileCoreServices.framework in Frameworks */,
-				33DA028D17C3D9550017C93B /* SystemConfiguration.framework in Frameworks */,
 				33DA028B17C3D94A0017C93B /* QuartzCore.framework in Frameworks */,
 				33DA028717C3D92C0017C93B /* libz.dylib in Frameworks */,
 				33DA028517C3D9170017C93B /* libicucore.dylib in Frameworks */,
@@ -265,8 +284,6 @@
 				7587871517C2F9B9006F5F22 /* UIKit.framework in Frameworks */,
 				7587871717C2F9B9006F5F22 /* Foundation.framework in Frameworks */,
 				7587871917C2F9B9006F5F22 /* CoreGraphics.framework in Frameworks */,
-				7587874317C2FE31006F5F22 /* FacebookSDK.framework in Frameworks */,
-				33DA027317C3D7450017C93B /* GoogleMaps.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,10 +453,12 @@
 		7587870817C2F9B9006F5F22 = {
 			isa = PBXGroup;
 			children = (
-				75E7A4C017E2C27F00BF8A3A /* icon.png */,
-				75E7A4C117E2C27F00BF8A3A /* icon@2x.png */,
-				750213A817D8EAAA00BF19D0 /* AudioToolbox.framework */,
-				750C5C2B17D3DF6D0041BA59 /* Accelerate.framework */,
+				752A0D9E180638C600FE844F /* icon29.png */,
+				752A0D9F180638C600FE844F /* icon57.png */,
+				752A0DA0180638C600FE844F /* icon58.png */,
+				752A0DA1180638C600FE844F /* icon80.png */,
+				752A0DA2180638C600FE844F /* icon114.png */,
+				752A0DA3180638C600FE844F /* icon120.png */,
 				7587871A17C2F9B9006F5F22 /* Muevete */,
 				7587871317C2F9B9006F5F22 /* Frameworks */,
 				7587871217C2F9B9006F5F22 /* Products */,
@@ -457,24 +476,27 @@
 		7587871317C2F9B9006F5F22 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				337FC87517CBBEAD0039271B /* OpenGLES.framework */,
-				337FC87317CBBE4E0039271B /* CFNetwork.framework */,
-				337FC87117CBBE3D0039271B /* MobileCoreServices.framework */,
-				7587874217C2FE31006F5F22 /* FacebookSDK.framework */,
-				33DA028C17C3D9550017C93B /* SystemConfiguration.framework */,
-				33DA028A17C3D94A0017C93B /* QuartzCore.framework */,
 				33DA028617C3D92C0017C93B /* libz.dylib */,
 				33DA028417C3D9170017C93B /* libicucore.dylib */,
 				33DA028217C3D9030017C93B /* libc++.dylib */,
+				752A0D981806090900FE844F /* GoogleMaps.bundle */,
+				752A0D96180608FB00FE844F /* GoogleMaps.framework */,
+				750213A817D8EAAA00BF19D0 /* AudioToolbox.framework */,
+				750C5C2B17D3DF6D0041BA59 /* Accelerate.framework */,
+				752A0D9C18060D2800FE844F /* AdSupport.framework */,
+				752A0D9A18060A1B00FE844F /* FacebookSDK.framework */,
+				75DC58BA1806045F00997EF7 /* Security.framework */,
+				337FC87517CBBEAD0039271B /* OpenGLES.framework */,
+				337FC87317CBBE4E0039271B /* CFNetwork.framework */,
+				337FC87117CBBE3D0039271B /* MobileCoreServices.framework */,
+				33DA028C17C3D9550017C93B /* SystemConfiguration.framework */,
+				33DA028A17C3D94A0017C93B /* QuartzCore.framework */,
 				33DA028017C3D8E90017C93B /* ImageIO.framework */,
 				33DA027E17C3D8DA0017C93B /* GLKit.framework */,
 				33DA027C17C3D8CC0017C93B /* CoreText.framework */,
 				33DA027A17C3D8C10017C93B /* CoreLocation.framework */,
 				33DA027817C3D8B40017C93B /* CoreData.framework */,
 				33DA027617C3D8A50017C93B /* AVFoundation.framework */,
-				33DA027417C3D8570017C93B /* GoogleMaps.bundle */,
-				33DA027217C3D7450017C93B /* GoogleMaps.framework */,
-				33DA027017C3C4CA0017C93B /* FacebookSDK.framework */,
 				7587873A17C2F9D4006F5F22 /* Social.framework */,
 				7587871417C2F9B9006F5F22 /* UIKit.framework */,
 				7587871617C2F9B9006F5F22 /* Foundation.framework */,
@@ -489,6 +511,7 @@
 				7587874117C2FA30006F5F22 /* fishhook */,
 				7587872317C2F9B9006F5F22 /* AppDelegate.h */,
 				7587872417C2F9B9006F5F22 /* AppDelegate.m */,
+				75DC58B4180601ED00997EF7 /* Flurry */,
 				7587872C17C2F9B9006F5F22 /* MainStoryboard_iPhone.storyboard */,
 				7587872F17C2F9B9006F5F22 /* MainStoryboard_iPad.storyboard */,
 				750C5C7217D6B0290041BA59 /* ViewControllers */,
@@ -538,6 +561,15 @@
 				750213AC17D8F80400BF19D0 /* Vibration.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		75DC58B4180601ED00997EF7 /* Flurry */ = {
+			isa = PBXGroup;
+			children = (
+				75DC58B51806022600997EF7 /* Flurry.h */,
+				75DC58B61806022600997EF7 /* libFlurry_4.2.4.a */,
+			);
+			name = Flurry;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -592,23 +624,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				754E763317FC8545008F5841 /* applogo2.png in Resources */,
-				75E7A4C217E2C27F00BF8A3A /* icon.png in Resources */,
 				75E7A4B417E2105300BF8A3A /* applogo.png in Resources */,
 				7587871F17C2F9B9006F5F22 /* InfoPlist.strings in Resources */,
 				7587872717C2F9B9006F5F22 /* Default.png in Resources */,
+				752A0DA5180638C700FE844F /* icon57.png in Resources */,
+				752A0D991806090900FE844F /* GoogleMaps.bundle in Resources */,
 				75E7A4BF17E2B87100BF8A3A /* main1st.png in Resources */,
 				7587872917C2F9B9006F5F22 /* Default@2x.png in Resources */,
+				752A0DA8180638C700FE844F /* icon114.png in Resources */,
 				75A5E00417E781A600B4EFA1 /* lock.png in Resources */,
 				7587872B17C2F9B9006F5F22 /* Default-568h@2x.png in Resources */,
 				75E7A4D317E402AE00BF8A3A /* colpatriasmall.png in Resources */,
 				7587872E17C2F9B9006F5F22 /* MainStoryboard_iPhone.storyboard in Resources */,
 				754E763117FC83B4008F5841 /* logocolpatria.png in Resources */,
 				75E7A4BD17E2B67F00BF8A3A /* muevetesolo.png in Resources */,
+				752A0DA7180638C700FE844F /* icon80.png in Resources */,
 				7587873117C2F9B9006F5F22 /* MainStoryboard_iPad.storyboard in Resources */,
+				752A0DA6180638C700FE844F /* icon58.png in Resources */,
 				75E7A4BB17E2B5FA00BF8A3A /* colpatrialogo.png in Resources */,
 				75E7A4D117E38A6D00BF8A3A /* fb-icon.png in Resources */,
 				75E7A4CA17E2D12600BF8A3A /* last.png in Resources */,
-				33DA027517C3D8570017C93B /* GoogleMaps.bundle in Resources */,
 				336A800617C5103800AD1003 /* home.jpeg in Resources */,
 				750C5C3017D529B00041BA59 /* cancel.png in Resources */,
 				75E7A4CB17E2D12600BF8A3A /* next.png in Resources */,
@@ -624,11 +659,12 @@
 				7502139F17D822E300BF19D0 /* right.png in Resources */,
 				750213A217D822F100BF19D0 /* down.png in Resources */,
 				750213A317D822F100BF19D0 /* left.png in Resources */,
+				752A0DA4180638C700FE844F /* icon29.png in Resources */,
 				750213AF17D9046C00BF19D0 /* fbconnect.png in Resources */,
+				752A0DA9180638C700FE844F /* icon120.png in Resources */,
 				750213B117D9059A00BF19D0 /* grip.png in Resources */,
 				75F83E7817E8B02C00025F4C /* lock2.png in Resources */,
 				75E7A4C717E2CAB500BF8A3A /* puntosseguros.png in Resources */,
-				75E7A4C317E2C27F00BF8A3A /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -774,18 +810,23 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Andres Abril (B5HW87Q346)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../Documents/FacebookSDK\"",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"/Users/andresabril/Downloads/GoogleMaps-iOS-1.5.0",
+					/Users/andresabril/Repositories/MuevetePro,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Muevete/Muevete-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Muevete/Muevete-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/andresabril/Repositories/MuevetePro/Muevete,
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "00CBB810-0068-4D47-84DF-7A2812B7A092";
+				PROVISIONING_PROFILE = "7163CBB0-EE2B-41D8-8581-F1EEF8317B6F";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
@@ -800,23 +841,86 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Andres Abril (B5HW87Q346)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"\"$(SRCROOT)/../../Documents/FacebookSDK\"",
-					"\"$(SRCROOT)\"",
+					"$(SRCROOT)",
+					"/Users/andresabril/Downloads/GoogleMaps-iOS-1.5.0",
+					/Users/andresabril/Repositories/MuevetePro,
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Muevete/Muevete-Prefix.pch";
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				INFOPLIST_FILE = "Muevete/Muevete-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/andresabril/Repositories/MuevetePro/Muevete,
+				);
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "00CBB810-0068-4D47-84DF-7A2812B7A092";
+				PROVISIONING_PROFILE = "7163CBB0-EE2B-41D8-8581-F1EEF8317B6F";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = armv7;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
+		};
+		75DC58B21806009200997EF7 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Andres Abril (SG2KB3SDCR)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Distribution;
+		};
+		75DC58B31806009200997EF7 /* Distribution */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: iAm Studio S.A.S. (4U39LJL48R)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: iAm Studio S.A.S. (4U39LJL48R)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)",
+					"/Users/andresabril/Downloads/GoogleMaps-iOS-1.5.0",
+					/Users/andresabril/Repositories/MuevetePro,
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Muevete/Muevete-Prefix.pch";
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				INFOPLIST_FILE = "Muevete/Muevete-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/andresabril/Repositories/MuevetePro/Muevete,
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "9F11D5D8-2B29-464A-8D5C-84236AE71061";
+				TARGETED_DEVICE_FAMILY = 1;
+				VALID_ARCHS = armv7;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Distribution;
 		};
 /* End XCBuildConfiguration section */
 
@@ -826,6 +930,7 @@
 			buildConfigurations = (
 				7587873517C2F9B9006F5F22 /* Debug */,
 				7587873617C2F9B9006F5F22 /* Release */,
+				75DC58B21806009200997EF7 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -835,6 +940,7 @@
 			buildConfigurations = (
 				7587873817C2F9B9006F5F22 /* Debug */,
 				7587873917C2F9B9006F5F22 /* Release */,
+				75DC58B31806009200997EF7 /* Distribution */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

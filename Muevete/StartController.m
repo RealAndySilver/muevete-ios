@@ -92,7 +92,7 @@
         UIImageView *grip=[[UIImageView alloc]initWithImage:[UIImage imageNamed:@"grip.png"]];
         grip.frame=CGRectMake(0, 0, 10, 20);
         grip.center=CGPointMake(leftBar.frame.size.width-20, leftBar.frame.size.height/2);
-        [grip setTintColor:[UIColor redColor]];
+        //[grip setTintColor:[UIColor redColor]];
         grip.alpha=0.3;
         [leftBar addSubview:grip];
         

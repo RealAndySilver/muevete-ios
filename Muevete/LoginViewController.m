@@ -26,7 +26,7 @@
 
 - (void)viewDidLoad{
     [super viewDidLoad];
-    [self deleteUserDic];
+    //[self deleteUserDic];
     if ([self userExists]) {
         [self goToNextVC];
         return;
@@ -116,7 +116,7 @@
     ServerCommunicator *server=[[ServerCommunicator alloc]init];
     server.caller=self;
     server.tag=1;
-    NSString *params=[NSString stringWithFormat:@"facebookId=%@&name=%@&email=%@&token=1234",[user objectForKey:@"id"],[user objectForKey:@"name"],[user objectForKey:@"email"]];
+    NSString *params=[NSString stringWithFormat:@"facebookId=%@&name=%@&email=%@&token=%@",[user objectForKey:@"id"],[user objectForKey:@"name"],[user objectForKey:@"email"],[self getUserToken]];
     params=[params stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     params=[params stringByExpandingTildeInPath];
     NSLog(@"Params %@",params);
@@ -180,6 +180,10 @@
 -(NSDictionary*)getUserDictionary{
     FileSaver *file=[[FileSaver alloc]init];
     return [file getDictionary:@"user"];
+}
+-(NSString*)getUserToken{
+    FileSaver *file=[[FileSaver alloc]init];
+    return [file getToken];
 }
 #pragma mark - set dictionary in file
 -(void)setDictionary:(NSDictionary*)dic withKey:(NSString*)key{

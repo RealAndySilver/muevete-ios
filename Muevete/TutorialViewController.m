@@ -49,7 +49,7 @@
     tutorialView1.mainImageView.image=[UIImage imageNamed:@"main1st.png"];
     tutorialView1.titleLabel.frame=CGRectMake(20, tutorialView1.bottomImageView.frame.origin.y-25, 150, 30);
     tutorialView1.textView.frame=CGRectMake(tutorialView1.bottomImageView.frame.origin.x+tutorialView1.bottomImageView.frame.size.width+10,tutorialView1.titleLabel.frame.origin.y,self.view.frame.size.width-40-tutorialView1.bottomImageView.frame.size.width, 120);
-    tutorialView1.textView.text=@"Muévete medirá tu trayecto y te mostrará los puntos seguros de la cicovía.\nTambién podrás consultar tus trayectos en cualquier momento.";
+    tutorialView1.textView.text=@"Muévete medirá tu trayecto y te mostrará los puntos seguros de la ciclovía.\nTambién podrás consultar tus trayectos en cualquier momento.";
     tutorialView1.bottomLine.text=@"Desliza a la izquierda para continuar";
     [scrollView addSubview:tutorialView1];
     

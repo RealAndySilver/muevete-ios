@@ -7,8 +7,8 @@
 //
 
 #import "ServerCommunicator.h"
-//#define ENDPOINT @"http://10.0.1.7:5000/api_1.0/"
-#define ENDPOINT @"http://muevete.aws.af.cm/api_1.0/"
+#define ENDPOINT @"http://10.0.1.7:5000/api_1.0/"
+//#define ENDPOINT @"http://muevete.aws.af.cm/api_1.0/"
 
 @implementation ServerCommunicator
 @synthesize dictionary,tag,caller,objectDic,methodName;
@@ -72,7 +72,7 @@
     [theRequest setValue:[NSString stringWithFormat:@"%@",[IAmCoder base64String:key]] forHTTPHeaderField:@"C99-RSA"];
     [theRequest setValue:[NSString stringWithFormat:@"%@",[IAmCoder base64String:time]] forHTTPHeaderField:@"SSL"];
     [theRequest setValue:encoded forHTTPHeaderField:@"token"];
-    NSLog(@"Header %@",theRequest.allHTTPHeaderFields);
+    NSLog(@"Header %@\nTime %@",theRequest.allHTTPHeaderFields,time);
     return theRequest;
 }
 #pragma mark NSURLConnection methods

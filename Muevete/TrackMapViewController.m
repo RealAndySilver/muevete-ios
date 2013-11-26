@@ -102,14 +102,14 @@
     GMSMarker *marker1 = [GMSMarker markerWithPosition:startPoint.coordinate];
     marker1.icon=[GMSMarker markerImageWithColor:kGreenColor];
     [self reverseGeocodeWithCoordinate:marker1.position marker:marker1 andState:@"Punto de Partida"];
-    marker1.animated=YES;
+    marker1.appearAnimation = kGMSMarkerAnimationPop;
     marker1.map = _mapView_;
     
     
     GMSMarker *marker2 = [GMSMarker markerWithPosition:finishPoint.coordinate];
     marker2.icon=[GMSMarker markerImageWithColor:kRedColor];
     [self reverseGeocodeWithCoordinate:marker2.position marker:marker2 andState:@"Fin del Recorrido"];
-    marker2.animated=YES;
+    marker2.appearAnimation = kGMSMarkerAnimationPop;
     marker2.map = _mapView_;
     
     for (NSDictionary *dic in pointsArray) {

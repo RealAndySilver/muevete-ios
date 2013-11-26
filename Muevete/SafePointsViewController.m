@@ -102,21 +102,10 @@
                                                                longitude:[[spotsDic objectForKey:@"lon"]doubleValue]];
                 GMSMarker *marker = [GMSMarker markerWithPosition:location.coordinate];
                 marker.title = [spotsDic objectForKey:@"name"];
-                marker.snippet = [NSString stringWithFormat:@"Punto de %@: %@",[spotsDic objectForKey:@"type"],[spotsDic objectForKey:@"address"]];
+                marker.snippet = [NSString stringWithFormat:@"%@: %@",[spotsDic objectForKey:@"type"],[spotsDic objectForKey:@"address"]];
                 //[self reverseGeocodeWithCoordinate:marker.position marker:marker andState:@"Punto de Partida"];
-                if ([[spotsDic objectForKey:@"type"] isEqualToString:@"Estiramiento"]) {
-                    marker.icon=[GMSMarker markerImageWithColor:kEstiramiento];
-                }
-                else if ([[spotsDic objectForKey:@"type"] isEqualToString:@"Bienestar"]) {
-                    marker.icon=[GMSMarker markerImageWithColor:kBienestar];
-                }
-                else if ([[spotsDic objectForKey:@"type"] isEqualToString:@"Salud"]) {
-                    marker.icon=[GMSMarker markerImageWithColor:kSalud];
-                }
-                else if ([[spotsDic objectForKey:@"type"] isEqualToString:@"Hidratacion"]) {
-                    marker.icon=[GMSMarker markerImageWithColor:kHidratacion];
-                }
-                marker.animated=YES;
+                marker.icon=[GMSMarker markerImageWithColor:kSalud];
+                marker.appearAnimation = kGMSMarkerAnimationPop;
                 marker.map = _mapView_;
             }
         }
@@ -130,21 +119,10 @@
                                                                longitude:[[spotsDic objectForKey:@"lon"]doubleValue]];
                 GMSMarker *marker = [GMSMarker markerWithPosition:location.coordinate];
                 marker.title = [spotsDic objectForKey:@"name"];
-                marker.snippet = [NSString stringWithFormat:@"Punto de %@: %@",[spotsDic objectForKey:@"type"],[spotsDic objectForKey:@"address"]];
+                marker.snippet = [NSString stringWithFormat:@"%@: %@",[spotsDic objectForKey:@"type"],[spotsDic objectForKey:@"address"]];
                 //[self reverseGeocodeWithCoordinate:marker.position marker:marker andState:@"Punto de Partida"];
-                if ([[spotsDic objectForKey:@"type"] isEqualToString:@"Estiramiento"]) {
-                    marker.icon=[GMSMarker markerImageWithColor:kEstiramiento];
-                }
-                else if ([[spotsDic objectForKey:@"type"] isEqualToString:@"Bienestar"]) {
-                    marker.icon=[GMSMarker markerImageWithColor:kBienestar];
-                }
-                else if ([[spotsDic objectForKey:@"type"] isEqualToString:@"Salud"]) {
-                    marker.icon=[GMSMarker markerImageWithColor:kSalud];
-                }
-                else if ([[spotsDic objectForKey:@"type"] isEqualToString:@"Hidratacion"]) {
-                    marker.icon=[GMSMarker markerImageWithColor:kHidratacion];
-                }
-                marker.animated=YES;
+                marker.icon=[GMSMarker markerImageWithColor:kSalud];
+                marker.appearAnimation = kGMSMarkerAnimationPop;
                 marker.map = _mapView_;
             }
         }
@@ -181,7 +159,7 @@
     GMSGeocoder *geo=[[GMSGeocoder alloc]init];
     [geo reverseGeocodeCoordinate:coordinate completionHandler:^(GMSReverseGeocodeResponse *resp, NSError *error){
         //NSLog(@"%@",resp.results);
-        marker.animated=YES;
+        marker.appearAnimation = kGMSMarkerAnimationPop;
         marker.map = _mapView_;
         if (resp.results.count>2) {
             GMSReverseGeocodeResult *result=resp.results[2];

@@ -202,7 +202,7 @@
     GMSGeocoder *geo=[[GMSGeocoder alloc]init];
     [geo reverseGeocodeCoordinate:coordinate completionHandler:^(GMSReverseGeocodeResponse *resp, NSError *error){
         //NSLog(@"%@",resp.results);
-        marker.animated=YES;
+        marker.appearAnimation = kGMSMarkerAnimationPop;
         marker.map = _mapView_;
         if (resp.results.count>2) {
             GMSReverseGeocodeResult *result=resp.results[2];
